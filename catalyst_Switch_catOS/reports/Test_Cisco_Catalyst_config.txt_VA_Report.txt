@@ -1,0 +1,88 @@
+Check 1: Device enable password not set
+
+Status: Safe
+Safe Factor: Enable password is set
+configuration: set enablepass DEMOSAMPLE
+
+
+Check 2 : Insecure remote access
+
+Status: Unsafe
+Unsafe Factor: Telnet is configured for remote administration
+configuration: set ip permit enable telnet
+
+
+Check 3 : Remote access is not restricted
+
+Status: Unsafe
+Unsafe Factor: Remote access is not restricted
+Configuration: Remote access is not restricted for the for following protocols: telnet, ssh
+
+
+Check 4 : Unattended terminals not secured
+
+Status: Unsafe
+Unsafe Factor: Idle session timeout is not configured
+
+
+Check 5: User authentication not configured
+
+Status: Safe
+Safe Factor: User authentication is configured on the device
+
+
+Check 6: Unnecessary services running
+
+Status: Review
+Configuration: Review the requirement of following services: DNS, HTTP Server, NTP
+
+
+Check 7: CDP is running
+
+Status: Unsafe
+Unsafe Factor: CDP protocol is enabled on the device
+
+
+Check 8: SNMP service is not secured
+
+Status: Safe
+Safe Factor: SNMP Service is securely configured.
+
+
+Check 9: Device sends IP unreachable messages
+
+Status: Unsafe
+Unsafe Factor: IP unreachable message is enabled on the device
+
+
+Check 10: Unsafe logging configuration
+
+Status: Unsafe
+Unsafe Factor: Logging on centralized server is not enabled
+
+
+ Check 11: Device sends IP redirects
+
+Status: Unsafe
+Unsafe Factor: IP redirect message is enabled on the device
+
+
+Check 12: Unsafe Time zone setting
+
+Status: Manual Review
+Configuration: Following timezone is configured. Manually Review it: set timezone GMT 0 0
+
+Status: Manual Review
+Summer-time Configuration: Check over internet if the country follows Daylight Saving Time. 'set summertime' command is configured. Check for the timezone and other settings as per checklist.
+Summer time Setting: set summertime enable BST
+
+Check 13 : Telnet banner is enabled
+
+Status: Unsafe
+Configuration: Telnet banner is not disabled
+
+
+Check 14 : System statutory warning not set
+
+Status: Safe
+Configuration: System statutory banner is set

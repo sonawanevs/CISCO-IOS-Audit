@@ -1,0 +1,220 @@
+﻿CRL04X02#sh run
+Building configuration...
+
+Current configuration : 4573 bytes
+!
+version 11.4
+service tcp-keepalives-in
+service timestamps debug datetime localtime
+service timestamps log datetime msec localtime show-timezone
+service password-encryption
+!
+hostname CRL04X02
+!
+boot-start-marker
+boot-end-marker
+!
+logging message-counter syslog
+logging buffered 4096
+enable secret 5 XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+!
+no aaa new-model
+clock timezone s'pore 8
+!
+dot11 syslog
+no ip source-route
+!         
+!
+ip cef
+!
+!
+ip name-server 192.228.128.20
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+username cisco password 7 XXXXXXXXX
+archive
+ log config
+  hidekeys
+! 
+!
+!
+!
+!
+!         
+!
+!
+interface FastEthernet0/0
+ ip address 203.223.139.1 255.255.255.192
+ duplex auto
+ speed auto
+ no cdp enable
+!
+interface FastEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface Serial0/1/0
+ description # Leased Line 2048kbps TMB DQDM 1410 4962 AIMS
+ bandwidth 2048
+ ip address 203.223.142.6 255.255.255.252
+ no ip mroute-cache
+ no fair-queue
+ no cdp enable
+!
+ip forward-protocol nd
+ip route 0.0.0.0 0.0.0.0 203.223.142.5
+ip route 203.223.139.0 255.255.255.192 Null0
+no ip http server
+no ip http secure-server
+!
+!
+!
+ip access-list standard orion_acl
+ permit 203.223.139.29
+ permit 203.223.139.2
+!
+logging facility syslog
+logging 203.223.139.18
+logging 10.21.1.81
+access-list 1 permit 203.223.139.17
+access-list 1 permit 203.223.139.11
+access-list 100 permit ip any host 203.223.139.27
+access-list 100 permit ip any host 203.223.139.12
+access-list 100 permit udp host 192.228.128.18 eq ntp host 203.223.142.6
+access-list 100 permit udp host 192.228.128.20 eq ntp host 203.223.142.6
+access-list 100 permit tcp host 212.24.234.82 host 203.223.139.21 eq 1110
+access-list 100 permit udp any host 203.223.139.4 eq domain
+access-list 100 permit udp any host 203.223.139.2 eq domain
+access-list 100 permit udp any eq domain host 203.223.139.4
+access-list 100 permit udp any eq domain host 203.223.139.2
+access-list 100 permit udp any eq domain host 203.223.139.6
+access-list 100 permit udp any eq domain host 203.223.139.20
+access-list 100 permit tcp any host 203.223.139.3 eq 443
+access-list 100 permit tcp any host 203.223.139.3 eq www
+access-list 100 permit tcp any host 203.223.139.28 eq 443
+access-list 100 permit tcp any host 203.223.139.28 eq www
+access-list 100 permit tcp any host 203.223.139.31 log
+access-list 100 permit udp any host 203.223.139.31 log
+access-list 100 permit udp any any eq echo
+access-list 100 permit tcp any any eq smtp
+access-list 100 permit tcp any any eq nntp
+access-list 100 permit tcp any eq ftp-data any
+access-list 100 permit tcp any any established
+access-list 100 permit icmp any any time-exceeded
+access-list 100 permit icmp any any unreachable
+access-list 100 permit icmp any any echo-reply
+access-list 100 permit tcp any any eq domain
+access-list 100 deny   ip 192.168.0.0 0.0.255.255 any log
+access-list 100 deny   ip 172.16.0.0 0.15.255.255 any log
+access-list 100 deny   ip 127.0.0.0 0.255.255.255 any log
+access-list 100 deny   ip 10.0.0.0 0.255.255.255 any log
+access-list 100 deny   ip any any
+snmp-server group orion v3 priv notify *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF7F access orion_acl
+snmp-server community snmpRO49 RO 2
+snmp-server host 10.19.32.27 version 3 priv sc_ro 
+no cdp run
+
+!
+!
+!
+!
+!
+control-plane
+!
+banner motd ^CCCCC                  
+
+        If not authorized to access this system, disconnect now.
+        YOU SHOULD HAVE NO EXPECTATION OF PRIVACY
+
+
+
+       This system is for the use of authorized users only.  Individuals
+       using this computer system without authority, or in excess of their
+       authority, are subject to having all of their activities on this
+       system monitored and recorded by system personnel.
+
+       In the course of monitoring individuals improperly using this system,
+       or in the course of system maintenance, the activities of authorized
+       users may also be monitored.
+
+       Anyone using this system expressly consents to such monitoring and is
+       advised that if such monitoring reveals possible evidence of criminal
+       advised that if such monitoring reveals possible evidence of criminal
+       to law enforcement officials.
+^C
+!
+line con 0
+ session-timeout 5 
+ exec-timeout 5 0
+ password 7 0100030758040B5A71181759
+ login
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ session-timeout 5 
+ access-class 1 in
+ exec-timeout 5 0
+ password 7 00171605075406535F75151E
+ login
+ transport input telnet
+!
+scheduler allocate 20000 1000
+ntp server 192.228.128.18
+end
+
+CRL04X02#sh ver
+Cisco IOS Software, 2800 Software (C2800NM-ADVSECURITYK9-M), Version 12.4(20)T2, RELEASE SOFTWARE (fc4)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Sat 31-Jan-09 13:46 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.4(13r)T, RELEASE SOFTWARE (fc1)
+
+CRL04X02 uptime is 14 weeks, 5 days, 1 hour, 35 minutes
+System returned to ROM by power-on
+System image file is "flash:c2800nm-advsecurityk9-mz.124-20.T2.bin"
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco 2811 (revision 53.51) with 247808K/14336K bytes of memory.
+Processor board ID FHK1311F0B7
+3 FastEthernet interfaces
+1 Serial(sync/async) interface
+1 Virtual Private Network (VPN) Module
+DRAM configuration is 64 bits wide with parity enabled.
+191K bytes of non-volatile configuration memory.
+62720K bytes of ATA CompactFlash (Read/Write)
+
+Configuration register is 0x2102
+
+CRL04X02#sh clock
+*10:04:11.254 s'pore Wed Dec 15 2010

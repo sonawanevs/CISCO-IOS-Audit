@@ -1,0 +1,206 @@
+Check 1: Device enable secret password not set
+
+Status: Unsafe
+Unsafe Factor: Enable Secret password is not set
+
+
+Check 2: Password encryption is not enabled
+
+Status: Safe
+Safe Factor: Password encryption is enabled
+configuration: service password-encryption
+
+
+Check 3: Unencrypted remote administration
+
+Status: Unsafe
+Unsafe Factor: Telnet is configured for remote administration
+Configuration: Following VTY lines are configured: line vty 0 4, line vty 5 15
+
+
+Check 4: Unrestricted Remote Administration
+
+Status: Unsafe
+Unsafe Factor: Access list control for incoming connections is not applied to the VTY lines via access-class.
+Configuration: Following VTY lines are configured with unrestricted access: line vty 0 4, line vty 5 15
+
+
+Check 5: User Authentication Not Configured
+
+Status: Unsafe
+Unsafe Factor: User authentication is not configured for CON Lines
+Configuration: Following CON lines are configured without authentication: line con 0
+
+
+Check 6: No time out for idle sessions
+
+Status: Safe
+Safe Factor: Device is configured securely against idle sessions
+
+
+Check 7: Unsafe log generation and log collection
+
+Status: Safe
+Safe Factor: Centralized logging is enabled.
+
+
+Check 8: Time server not designated
+
+Status: Safe
+Safe Factor: NTP Server is configured
+
+
+Check 9: No timestamp on logs and debug information
+
+Status: Safe
+Safe Factor: Timestamp on logs and debug information is set
+
+
+Check 14: SNMPv1 or SNMPv2 is being used for device management and monitoring
+
+Status: Safe
+Safe Factor: SNMP Version 3 is being used for device management
+
+
+Check 15: Default SNMP Community Strings are used
+
+
+Status: Manual Review
+Review Factor: Client may have removed community string for security reasons. JUST CHECK BELOW IN 'Configuration' PART OF THIS FINDING ONLY, if client has removed community string. If he has removed community string, we will make this check as REVIEW for client. If you find community string, then mark this check as SAFE.
+
+Configuration: Following SNMP community strings are configured: snmp-server community sc_rw RW SNMP_ACL, snmp-server community sc_rw RW SNMP_ACL
+
+
+Check 24 : System statutory warning not set
+
+Status: Unsafe
+Unsafe Factor: AAA authentication banner is not configured
+
+
+Check 26: Unrestricted SNMP management and monitoring
+
+Status: Unsafe
+Unsafe Factor: Access list is not configured to restrict the SNMP access
+Configuration: Access list is not applied on following SNMP communities: snmp-server community sc_ro RO SNMP_ACL, snmp-server community sc_rw RW SNMP_ACL
+
+
+Check 27 : Auxiliary Port is Not Disabled
+
+Status: Safe
+Safe Factor: Auxliliary port is not configured for remote administration
+
+
+Check 28 : Old Vulnerable Version of SSH Being Used
+
+Status: Unsafe
+Unsafe Factor: Cisco IOS version less than 12.1 is installed on device. It does not support SSH version 2.
+
+
+Check 30 : Incorrect Time & Time zone setting
+
+Status: Manual Review
+Configuration: Following timezone is configured. Manually Review it: clock timezone MYT 8
+
+Status: Manual Review
+Summer-time Configuration: Check over internet if the country follows Daylight Saving Time. If it follows, then mark this check as UNSAFE as they must configure 'clock summer-time' command along with 'clock timezone' command on device. If country does not follow Daylight Saying Time, then decide safe/unsafe based on timezone setting.
+
+Check 17 : CDP is running
+
+Status: Unsafe
+Unsafe Factor: Interfaces are configured without "no cdp enable" command
+Configuration: Following interfaces are without the "no cdp enable" configuration:-
+          Role Sts Cost      Prio.Nbr Type, Loopback0, Port-channel1, Port-channel2, Port-channel3, Port-channel10, Port-channel20, TenGigabitEthernet1/1/1, TenGigabitEthernet1/1/2, TenGigabitEthernet1/1/3, TenGigabitEthernet1/1/4, GigabitEthernet1/2/1, GigabitEthernet1/2/2, GigabitEthernet1/2/3, GigabitEthernet1/2/4, GigabitEthernet1/5/1, GigabitEthernet1/5/2, GigabitEthernet1/5/3, TenGigabitEthernet1/5/4, TenGigabitEthernet1/5/5, TenGigabitEthernet2/1/1, TenGigabitEthernet2/1/2, TenGigabitEthernet2/1/3, TenGigabitEthernet2/1/4, GigabitEthernet2/2/1, GigabitEthernet2/2/2, GigabitEthernet2/2/3, GigabitEthernet2/2/4, GigabitEthernet2/5/1, GigabitEthernet2/5/2, GigabitEthernet2/5/3, TenGigabitEthernet2/5/4, TenGigabitEthernet2/5/5, Vlan10, Vlan20, Vlan30
+
+
+Check 16 : Unnecessary services running
+
+Status: Review
+Configuration: Review the requirement of the following services: 
+BOOTP, DHCP, Finger
+
+Status: Review
+Service Mop: Ethernet
+Configuration: Review that the interfaces listed below are ethernet only: 
+          Role Sts Cost      Prio.Nbr Type, Loopback0, Port-channel1, Port-channel2, Port-channel3, Port-channel10, Port-channel20, TenGigabitEthernet1/1/1, TenGigabitEthernet1/1/2, TenGigabitEthernet1/1/3, TenGigabitEthernet1/1/4, GigabitEthernet1/2/1, GigabitEthernet1/2/2, GigabitEthernet1/2/3, GigabitEthernet1/2/4, GigabitEthernet1/5/1, GigabitEthernet1/5/2, GigabitEthernet1/5/3, TenGigabitEthernet1/5/4, TenGigabitEthernet1/5/5, TenGigabitEthernet2/1/1, TenGigabitEthernet2/1/2, TenGigabitEthernet2/1/3, TenGigabitEthernet2/1/4, GigabitEthernet2/2/1, GigabitEthernet2/2/2, GigabitEthernet2/2/3, GigabitEthernet2/2/4, GigabitEthernet2/5/1, GigabitEthernet2/5/2, GigabitEthernet2/5/3, TenGigabitEthernet2/5/4, TenGigabitEthernet2/5/5, Vlan10, Vlan20, Vlan30
+
+
+Check 20 : Device sends IP unreachable messages
+
+Status: Unsafe
+Unsafe Factor: Interfaces are configured without "no ip unreachables" command
+Configuration: Following interfaces are without the "no ip unreachables" configuration:-
+Loopback0, GigabitEthernet1/5/3, GigabitEthernet2/5/3
+
+
+Check 21 : Device sends ICMP mask-reply
+
+Status: Safe
+Safe Factor: "ip mask-reply" command is not configured on any interface
+
+
+Check 22 : Device sends IP redirects
+
+Status: Unsafe
+Unsafe Factor: Interfaces are configured without "no ip redirects" command
+Configuration: Following interfaces are without the "no ip redirects" configuration:-
+Loopback0, GigabitEthernet1/5/3, GigabitEthernet2/5/3
+
+
+Check 25 : Proxy ARP is Not Disabled
+
+Status: Unsafe
+Unsafe Factor: Interfaces are configured without "no ip proxy-arp" command
+Configuration: Following interfaces are without the "no ip proxy-arp" configuration:-
+Loopback0, GigabitEthernet1/5/3, GigabitEthernet2/5/3
+
+
+Check 19 : Device processes directed broadcasts
+
+Status: Unsafe
+Unsafe Factor: Interfaces are configured without "no ip directed-broadcast" command
+Configuration: Following interfaces are without the "no ip directed-broadcast" configuration:-
+Loopback0, Port-channel1, Port-channel2, Port-channel3, GigabitEthernet1/5/3, GigabitEthernet2/5/3, Vlan10, Vlan20, Vlan30
+
+
+Check 29 : Anti-Spoof access control lists are not configured
+
+Status: Unsafe
+Unsafe Factor: Interfaces are configured without "ip access-group" command
+Configuration: Following interfaces are without the "ip access-group" configuration:-
+Loopback0, Port-channel1, Port-channel2, Port-channel3, GigabitEthernet1/5/3, GigabitEthernet2/5/3, Vlan10, Vlan20, Vlan30
+
+
+Check 18: Device accepts IP source routed packets
+
+Status: Safe
+Safe Factor: Device does not accept IP source routed packets
+
+
+Check 23: UDP broadcast forwarding is enabled
+
+Status: Safe
+Safe Factor: Device does not redirect UDP broadcasts
+
+
+Check 10 : Insecure RIP Configuration
+
+Status: Safe
+Safe Factor: RIP protocol is not configured
+
+
+Check 11 : Insecure EIGRP configuration
+
+Status: Manual Review
+Configuration: EIGRP protocol is configured, Manually Review it.
+
+
+Check 12 : Insecure OSPF configuration
+
+Status: Safe
+Safe Factor: OSPF protocol is not configured
+
+
+Check 13 : Insecure BGP configuration
+
+Status: Safe
+Safe Factor: BGP protocol is not configured

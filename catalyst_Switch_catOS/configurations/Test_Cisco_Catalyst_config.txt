@@ -1,0 +1,372 @@
+DEMOSAMPLE
+
+This command shows non-default configurations only.
+Use 'show config all' to show both default and non-default configurations.
+..............
+..................
+....................
+
+
+
+
+
+
+..
+
+begin
+!
+# ***** NON-DEFAULT CONFIGURATION *****
+!
+!
+#time: Tue Sep 7 2010, 09:34:36 BST
+!
+#version 6.3(9)
+!
+set password DEMOSAMPLE
+set enablepass DEMOSAMPLE
+set banner motd ^C
+C
+*********************************************************************
+                          NOTICE TO USERS
+
+This Computer system is for authorised use only. Users
+(authorised or Unauthorised) have no explicit or implicit
+expectation of privacy. Any or all uses of this system
+and all files on this system may be intercepted, monitored,
+recorded, copied, audited, inspected, and disclosed to 
+authorised site personnel and law enforcement personnel, 
+as well as authorised officials of other agencies, both 
+domestic and foreign.
+
+By using this system, the user consents to such interception, 
+monitoring, recording, copying, auditing, inspection, and 
+disclosureat the discretion of authorised site personnel.
+
+Unauthorised or improper use of this system may result in
+administrative disciplinary action and civil and criminal penalties. 
+
+By continuing to use this system you indicate your awareness
+of and consent to these terms and conditions of use.
+
+LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+*********************************************************************
+^C
+!
+#system
+set system name  DEMOSAMPLE
+set system location LCY CAB57I
+set system contact  24 X 7 NIS Support
+!
+#!
+#snmp
+set snmp community read-only      m0rph3u5
+set snmp community read-write     hypn0s
+set snmp community read-write-all 
+set snmp trap enable  module
+set snmp trap enable  chassis
+set snmp trap enable  bridge
+set snmp trap enable  vtp
+set snmp trap enable  auth
+set snmp trap enable  ippermit
+set snmp trap enable  vmps
+set snmp trap enable  entity
+set snmp trap enable  config
+set snmp trap enable  stpx
+set snmp trap enable  syslog
+set snmp trap enable  system
+set snmp trap 172.21.10.15 read-only port 162 owner CLI index 1
+set snmp trap 172.21.10.16 read-only port 162 owner CLI index 2
+set snmp trap 194.102.27.245 m0rph3u5 port 162 owner CLI index 3
+set snmp trap 194.102.27.252 m0rph3u5 port 162 owner CLI index 4
+!
+#tacacs+
+set tacacs server 199.80.49.10 primary
+set tacacs server 199.80.49.11
+set tacacs key oak2007
+!
+#authentication
+set authentication login tacacs enable console primary
+set authentication login tacacs enable telnet primary
+set authentication login tacacs enable http primary
+set authentication enable tacacs enable console primary
+set authentication enable tacacs enable telnet primary
+set authentication enable tacacs enable http primary
+!
+#vtp
+set vtp domain DMZ
+set vtp mode transparent
+set vlan 1 name default type ethernet mtu 1500 said 100001 state active 
+set vlan 2 name DMZOuter(virtual) type ethernet mtu 1500 said 100002 state active 
+set vlan 3 name DMZOuter(real) type ethernet mtu 1500 said 100003 state active 
+set vlan 4 name DMZInner type ethernet mtu 1500 said 100004 state active 
+set vlan 8 name netcool type ethernet mtu 1500 said 100008 state active 
+set vlan 10 name ADMIN-Services type ethernet mtu 1500 said 100010 state active 
+set vlan 22 name PRE-PROD-OUTER type ethernet mtu 1500 said 100022 state active 
+set vlan 33 name PRE-PROD-OUTER-REAL type ethernet mtu 1500 said 100033 state active 
+set vlan 44 name PRE-PROD-INNER type ethernet mtu 1500 said 100044 state active 
+set vlan 60 name VLAN0060 type ethernet pvlan-type primary mtu 1500 said 100060 state active 
+set vlan 62 name VLAN0062 type ethernet pvlan-type isolated mtu 1500 said 100062 state active 
+set vlan 500 rspan name VLAN0500 state active
+set vlan 1002 name fddi-default type fddi mtu 1500 said 101002 state active 
+set vlan 1004 name fddinet-default type fddinet mtu 1500 said 101004 state active stp ieee 
+set vlan 1005 name trnet-default type trbrf mtu 1500 said 101005 state active stp ibm 
+set vlan 5,50
+set vlan 1003 name token-ring-default type trcrf mtu 1500 said 101003 state active mode srb aremaxhop 0 stemaxhop 0 backupcrf off 
+!
+#ip     
+set interface sc0 10 192.168.226.113/255.255.255.192 192.168.226.127
+
+set ip route 0.0.0.0/0.0.0.0         192.168.226.122
+set ip route 172.21.0.0/255.255.0.0     192.168.226.122
+set ip route 192.168.225.0/255.255.255.128 192.168.226.126
+!
+#spantree
+#portfast
+set spantree portfast bpdu-guard enable
+#vlan                         <VlanId>
+set spantree fwddelay 15     1003
+set spantree maxage   20     1003
+set spantree disable  1005
+set spantree fwddelay 15     1005
+set spantree maxage   20     1005
+!
+#syslog
+set logging level ld 2 default
+set logging level privatevlan 2 default
+!
+#ntp
+set timezone GMT 0 0
+set summertime enable BST
+!
+#set boot command
+set boot config-register 0x102
+set boot system flash bootflash:cat6000-sup.6-3-9.bin
+!
+#permit list
+set ip permit enable telnet
+set ip permit enable ssh
+set ip permit enable snmp
+set ip permit 172.21.10.12  snmp
+set ip permit 172.21.10.13  snmp
+set ip permit 172.21.10.15  snmp
+set ip permit 172.21.10.16  snmp
+set ip permit 194.102.27.244  snmp
+set ip permit 194.102.27.245  snmp
+set ip permit 194.102.27.252  snmp
+!
+#igmp
+set igmp disable
+!
+#qos
+set qos wred 1p2q2t tx queue 1 40:80 70:100 
+set qos wred 1p2q2t tx queue 2 40:80 70:100 
+!
+#port channel
+set port channel 2/35,2/38 1
+set port channel 1/1-2 21
+set port channel 2/1-4 22
+set port channel 2/5-8 23
+set port channel 2/9-12 24
+set port channel 2/13-16 25
+set port channel 2/17-20 26
+set port channel 2/21-24 27
+set port channel 2/25-28 28
+set port channel 2/29-32 29
+set port channel 2/33-34,2/36 30
+set port channel 2/37,2/39-40 31
+set port channel 2/41-44 32
+set port channel 2/45-48 33
+!
+#private vlans
+set pvlan 60 62
+!
+# default port status is enable
+!
+!       
+#module 1 : 2-port 1000BaseX Supervisor
+set module name    1     
+set port trap       1/1-2  enable
+set port name       1/1  Inter-switch trunk
+set udld enable 1/2 
+set trunk 1/1  desirable isl 1-1005,1025-4094
+!
+#module 2 : 48-port 10/100BaseTX Ethernet
+set vlan 2    2/8-10,2/26,2/28
+set vlan 3    2/7,2/11-13,2/18,2/23-25,2/42,2/44,2/46
+set vlan 4    2/5-6,2/14,2/20-21,2/27,2/29-32,2/37,2/39-40,2/45,2/47-48
+set vlan 8    2/2-4
+set vlan 10   2/22,2/35,2/38,2/41,2/43
+set vlan 22   2/15-16,2/19,2/33
+set vlan 33   2/17,2/34,2/36
+set vlan 44   2/1
+set port speed      2/1-48  100
+set port duplex     2/1-48  full
+set port trap       2/1-48  enable
+set port name       2/1  LPD-KSTAR-01-dec1
+set port name       2/2  Netcool probe
+set port name       2/3  Primary Cyberguard
+set port name       2/4  Secondary Cyberguard
+set port name       2/5  #*ENGWEB01
+set port name       2/6  wtfslcyw2k6
+set port name       2/7  #*ENGWEB01
+set port name       2/8  GISNLCYLDR01a-e0
+set port name       2/9  EX LPD-IDS-02
+set port name       2/10 LPD-KSTAR-01-dec2
+set port name       2/11 GISNLCYLDR01a-e1
+set port name       2/12 #*EARSWEB_05
+set port name       2/13 #*EARSWEB_06
+set port name       2/14 wtfslcyw2k7
+set port name       2/15 GISNLCYFWP02a
+set port name       2/16 GISNLCYFWY01a
+set port name       2/17 KHPREW08 NIC 1
+set port name       2/18 EARSWEB07
+set port name       2/19 GISNLCYFWP01a
+set port name       2/20 EASRWEB07
+set port name       2/21 #*KHWEN01
+set port name       2/22 GISNLCYLSW03a
+set port name       2/23 #*KHWEN01
+set port name       2/24 EARSWEB08
+set port name       2/25 #*KHREP01
+set port name       2/26 LPADCGNETPIX1
+set port name       2/27 #*GISFTP01
+set port name       2/28 LPD-PIX520-01 e1
+set port name       2/29 #*GISFTP02
+set port name       2/30 LPD-KSTAR-01-dec0
+set port name       2/31 #*EARSWEB_05
+set port name       2/32 #*EARSWEB_06
+set port name       2/33 GISNLCYLDR02N
+set port name       2/34 GISNLCYLDR02N
+set port name       2/35 GISNLCYLSW05a
+set port name       2/36 KHPREW09 NIC 1
+set port name       2/37 EASRWEB08
+set port name       2/38 GISNLCYLSW05a
+set port name       2/39 #*KHREP01
+set port name       2/40 #*KHWEN01
+set port name       2/41 Srcefire_Int_Snsr
+set port name       2/42 #*KHWEN01
+set port name       2/43 Srcefire_RNA_Sensor
+set port name       2/44 #*KHWEB03
+set port name       2/45 #*KHWEB03
+set port name       2/46 #*KHWEB04
+set port name       2/47 #*KHWEB04
+set port name       2/48 monitor
+set trunk 2/1  off negotiate 1-1005,1025-4094
+set trunk 2/2  off negotiate 1-1005,1025-4094
+set trunk 2/3  off negotiate 1-1005,1025-4094
+set trunk 2/4  off negotiate 1-1005,1025-4094
+set trunk 2/5  off negotiate 1-1005,1025-4094
+set trunk 2/6  off negotiate 1-1005,1025-4094
+set trunk 2/7  off negotiate 1-1005,1025-4094
+set trunk 2/8  off negotiate 1-1005,1025-4094
+set trunk 2/9  off negotiate 1-1005,1025-4094
+set trunk 2/10 off negotiate 1-1005,1025-4094
+set trunk 2/11 off negotiate 1-1005,1025-4094
+set trunk 2/12 off negotiate 1-1005,1025-4094
+set trunk 2/13 off negotiate 1-1005,1025-4094
+set trunk 2/14 off negotiate 1-1005,1025-4094
+set trunk 2/15 off negotiate 1-1005,1025-4094
+set trunk 2/16 off negotiate 1-1005,1025-4094
+set trunk 2/17 off negotiate 1-1005,1025-4094
+set trunk 2/18 off negotiate 1-1005,1025-4094
+set trunk 2/19 off negotiate 1-1005,1025-4094
+set trunk 2/20 off negotiate 1-1005,1025-4094
+set trunk 2/21 off negotiate 1-1005,1025-4094
+set trunk 2/22 off negotiate 1-1005,1025-4094
+set trunk 2/23 off negotiate 1-1005,1025-4094
+set trunk 2/24 off negotiate 1-1005,1025-4094
+set trunk 2/25 off negotiate 1-1005,1025-4094
+set trunk 2/26 off negotiate 1-1005,1025-4094
+set trunk 2/27 off negotiate 1-1005,1025-4094
+set trunk 2/28 off negotiate 1-1005,1025-4094
+set trunk 2/29 off negotiate 1-1005,1025-4094
+set trunk 2/30 off negotiate 1-1005,1025-4094
+set trunk 2/31 off negotiate 1-1005,1025-4094
+set trunk 2/32 off negotiate 1-1005,1025-4094
+set trunk 2/33 off negotiate 1-1005,1025-4094
+set trunk 2/34 off negotiate 1-1005,1025-4094
+set trunk 2/35 on isl 1-1005,1025-4094
+set trunk 2/36 off negotiate 1-1005,1025-4094
+set trunk 2/37 off negotiate 1-1005,1025-4094
+set trunk 2/38 on isl 1-1005,1025-4094
+set trunk 2/39 off negotiate 1-1005,1025-4094
+set trunk 2/40 off negotiate 1-1005,1025-4094
+set trunk 2/41 off negotiate 1-1005,1025-4094
+set trunk 2/42 off negotiate 1-1005,1025-4094
+set trunk 2/43 off negotiate 1-1005,1025-4094
+set trunk 2/44 off negotiate 1-1005,1025-4094
+set trunk 2/45 off negotiate 1-1005,1025-4094
+set trunk 2/46 off negotiate 1-1005,1025-4094
+set trunk 2/47 off negotiate 1-1005,1025-4094
+set trunk 2/48 off negotiate 1-1005,1025-4094
+set spantree portfast    2/1-7,2/9-10,2/12-21,2/23-32,2/36-37,2/39-46 enable
+set port channel 2/35,2/38 mode on
+set port channel 2/1-34,2/36-37,2/39-48 mode off
+!
+#module 3 empty
+!
+#module 4 empty
+!
+#module 5 empty
+!
+#module 6 empty
+!
+#module 15 : 1-port Multilayer Switch Feature Card
+!
+#module 16 empty
+!
+#switch port analyzer
+set span 2,4,22,44 2/43 both inpkts disable learning enable multicast enable create
+set span 2,4,22,44 2/41 both inpkts disable learning enable multicast enable create
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+GISNLCYLSW01a> (enable) sh ver
+WS-C6006 Software, Version NmpSW: 6.3(9)
+Copyright (c) 1995-2002 by Cisco Systems
+NMP S/W compiled on Sep 23 2002, 17:51:19
+
+System Bootstrap Version: 5.3(1)
+
+Hardware Version: 2.0  Model: WS-C6006  Serial #: TBA04130606
+
+PS1  Module: WS-CAC-1300W    Serial #: ACP04050165
+
+Mod Port Model               Serial #    Versions
+--- ---- ------------------- ----------- --------------------------------------
+1   2    WS-X6K-SUP1A-2GE    SAD0406090H Hw : 3.1
+                                         Fw : 5.3(1)
+                                         Fw1: 5.1(1)CSX
+                                         Sw : 6.3(9)
+                                         Sw1: 6.3(9)
+         WS-F6K-PFC          SAD040603PE Hw : 1.0
+2   48   WS-X6248-RJ-45      SAD04160DF8 Hw : 1.2
+                                         Fw : 5.1(1)CSX
+                                         Sw : 6.3(9)
+15  1    WS-F6K-MSFC         SAD040602TL Hw : 1.3
+                                         Fw : 12.0(7)XE1,
+                                         Sw : 12.0(7)XE1,
+
+       DRAM                    FLASH                   NVRAM
+Module Total   Used    Free    Total   Used    Free    Total Used  Free
+------ ------- ------- ------- ------- ------- ------- ----- ----- -----
+1       65408K  46709K  18699K  16384K  14051K   2333K  512K  269K  243K
+
+Uptime is 545 days, 17 hours, 6 minutes
+
+
+
+DEMOSAMPLE> (enable) sh time 
+Mon Sep 13 2010, 11:33:54 BST

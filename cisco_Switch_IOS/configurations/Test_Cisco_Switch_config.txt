@@ -1,0 +1,1402 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2010.05.25 10:31:41 =~=~=~=~=~=~=~=~=~=~=~=
+sh ver
+Cisco IOS Software, s72033_rp Software (s72033_rp-IPBASEK9-M), Version 12.2(33)SXI1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Sat 28-Mar-09 10:30 by prod_rel_team
+
+ROM: System Bootstrap, Version 12.2(17r)SX5, RELEASE SOFTWARE (fc1)
+
+ CSL04X01 uptime is 16 weeks, 1 day, 14 hours, 51 minutes
+Uptime for this control processor is 16 weeks, 1 day, 14 hours, 52 minutes
+Time since CSL04X01 switched to active is 16 weeks, 1 day, 14 hours, 48 minutes
+System returned to ROM by  power cycle at 22:58:36 MYT Fri Jul 31 2009 (SP by power-on)
+System restarted at 19:42:56 MYT Sun Jan 31 2010
+System image file is "sup-bootdisk:s72033-ipbasek9-mz.122-33.SXI1.bin"
+Last reload reason: Reload Command
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C6509-E (R7000) processor (revision 1.4) with 983008K/65536K bytes of memory.
+Processor board ID SMC1309001N
+SR71000 CPU at 600Mhz, Implementation 0x504, Rev 1.2, 512KB L2 Cache
+Last reset from s/w reset
+4 Virtual Ethernet interfaces
+54 Gigabit Ethernet interfaces
+12 Ten Gigabit Ethernet interfaces
+1917K bytes of non-volatile configuration memory.
+8192K bytes of packet buffer memory.
+
+65536K bytes of Flash internal SIMM (Sector size 512K).
+Configuration register is 0x2102
+
+CSL04X01#sh int v
+NAME: "Chassis 1 WS-C6509-E", DESCR: "Chassis 1 Cisco Systems Catalyst 6500 9-slot Chassis System"
+PID: WS-C6509-E        ,                     VID: V04, SN: SMC1309001N
+
+NAME: "Chassis 1 WS-C6K-VTT-E 1", DESCR: "Chassis 1 VTT-E FRU 1"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1249B093
+
+NAME: "Chassis 1 WS-C6K-VTT-E 2", DESCR: "Chassis 1 VTT-E FRU 2"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1249B163
+
+NAME: "Chassis 1 WS-C6K-VTT-E 3", DESCR: "Chassis 1 VTT-E FRU 3"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1249A268
+
+NAME: "Chassis 1 CLK-7600 1", DESCR: "Chassis 1 OSR-7600 Clock FRU 1"
+PID: CLK-7600          ,                     VID:    , SN: SMT1251A319
+
+NAME: "Chassis 1 CLK-7600 2", DESCR: "Chassis 1 OSR-7600 Clock FRU 2"
+PID: CLK-7600          ,                     VID:    , SN: SMT1251A319
+
+NAME: "Chassis 1 1", DESCR: "Chassis 1 WS-X6704-10GE CEF720 4 port 10-Gigabit Ethernet Rev. 2.9"
+PID: WS-X6704-10GE     ,                     VID: V02, SN: SAL1312LV7N
+
+NAME: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 1", DESCR: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.1"
+PID: WS-F6700-CFC      ,                     VID: V06, SN: SAL1312M3PN
+
+NAME: "Chassis 1 Transceiver Te1/1/1", DESCR: "Chassis 1 Transceiver 10Gbase-SR Te1/1/1"
+PID: XENPAK-10GB-SR    ,                     VID: V02 , SN: ONT12470275
+
+NAME: "Chassis 1 Transceiver Te1/1/2", DESCR: "Chassis 1 Transceiver 10Gbase-SR Te1/1/2"
+PID: XENPAK-10GB-SR    ,                     VID: V02 , SN: ONT1247028D
+
+NAME: "Chassis 1 Transceiver Te1/1/3", DESCR: "Chassis 1 Transceiver 10Gbase-SR Te1/1/3"
+PID: XENPAK-10GB-SR    ,                     VID: V02 , SN: ONT1248024T
+
+NAME: "Chassis 1 Transceiver Te1/1/4", DESCR: "Chassis 1 Transceiver 10Gbase-SR Te1/1/4"
+PID: XENPAK-10GB-SR    ,                     VID: V02 , SN: ONT125001MP
+
+NAME: "Chassis 1 2", DESCR: "Chassis 1 WS-X6724-SFP CEF720 24 port 1000mb SFP Rev. 3.3"
+PID: WS-X6724-SFP      ,                     VID: V05, SN: SAL1312M2VM
+
+NAME: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card sub-module of 2", DESCR: "Chassis 1 WS-F6700-CFC Centralized Forwarding Card Rev. 4.1"
+PID: WS-F6700-CFC      ,                     VID: V06, SN: SAL1310L8Z0
+
+NAME: "Chassis 1 5", DESCR: "Chassis 1 VS-S720-10G 5 ports Supervisor Engine 720 10GE Rev. 2.1"
+PID: VS-S720-10G       ,                     VID: V03, SN: SAL123418C8
+
+NAME: "Chassis 1 msfc sub-module of 5", DESCR: "Chassis 1 VS-F6K-MSFC3 MSFC3 Daughterboard Rev. 1.0"
+PID: VS-F6K-MSFC3      ,                     VID:    , SN: SAL12362LMC
+
+NAME: "Chassis 1 VS-F6K-PFC3C Policy Feature Card 3 sub-module of 5", DESCR: "Chassis 1 VS-F6K-PFC3C Policy Feature Card 3 Rev. 1.0"
+PID: VS-F6K-PFC3C      ,                     VID: V01, SN: SAL12383NRN
+
+NAME: "Chassis 1 Transceiver Te1/5/4", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/5/4"
+PID: X2-10GB-SR        ,                     VID: V03 , SN: FNS12470RGF
+
+NAME: "Chassis 1 Transceiver Te1/5/5", DESCR: "Chassis 1 X2 Transceiver 10Gbase-SR Te1/5/5"
+PID: X2-10GB-SR        ,                     VID: V03 , SN: FNS12460L5M
+
+NAME: "Chassis 1 WS-C6509-E-FAN 1", DESCR: "Chassis 1 Enhanced 9-slot Fan Tray 1"
+PID: WS-C6509-E-FAN    ,                     VID: V03, SN: DCH12530526
+
+NAME: "Chassis 1 PS 1 WS-CAC-3000W", DESCR: "Chassis 1 AC power supply, 3000 watt 1"
+PID: WS-CAC-3000W      ,                     VID: V01, SN: SNI1309AW2U
+
+NAME: "Chassis 1 PS 2 WS-CAC-3000W", DESCR: "Chassis 1 AC power supply, 3000 watt 2"
+PID: WS-CAC-3000W      ,                     VID: V01, SN: SNI1309AW2M
+
+NAME: "Chassis 2 WS-C6509-E", DESCR: "Chassis 2 Cisco Systems Catalyst 6500 9-slot Chassis System"
+PID: WS-C6509-E        ,                     VID: V04, SN: SMC1309001L
+
+NAME: "Chassis 2 WS-C6K-VTT-E 1", DESCR: "Chassis 2 VTT-E FRU 1"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1249B063
+
+NAME: "Chassis 2 WS-C6K-VTT-E 2", DESCR: "Chassis 2 VTT-E FRU 2"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1249C139
+
+NAME: "Chassis 2 WS-C6K-VTT-E 3", DESCR: "Chassis 2 VTT-E FRU 3"
+PID: WS-C6K-VTT-E      ,                     VID:    , SN: SMT1249A808
+
+NAME: "Chassis 2 CLK-7600 1", DESCR: "Chassis 2 OSR-7600 Clock FRU 1"
+PID: CLK-7600          ,                     VID:    , SN: SMT1251A688
+
+NAME: "Chassis 2 CLK-7600 2", DESCR: "Chassis 2 OSR-7600 Clock FRU 2"
+PID: CLK-7600          ,                     VID:    , SN: SMT1251A688
+
+NAME: "Chassis 2 1", DESCR: "Chassis 2 WS-X6704-10GE CEF720 4 port 10-Gigabit Ethernet Rev. 2.9"
+PID: WS-X6704-10GE     ,                     VID: V02, SN: SAL1312LV70
+
+NAME: "Chassis 2 WS-F6700-CFC Centralized Forwarding Card sub-module of 1", DESCR: "Chassis 2 WS-F6700-CFC Centralized Forwarding Card Rev. 4.1"
+PID: WS-F6700-CFC      ,                     VID: V06, SN: SAL1312LX2M
+
+NAME: "Chassis 2 Transceiver Te2/1/1", DESCR: "Chassis 2 Transceiver 10Gbase-SR Te2/1/1"
+PID: XENPAK-10GB-SR    ,                     VID: V02 , SN: ONT1248021T
+
+NAME: "Chassis 2 Transceiver Te2/1/2", DESCR: "Chassis 2 Transceiver 10Gbase-SR Te2/1/2"
+PID: XENPAK-10GB-SR    ,                     VID: V02 , SN: ONT124801AU
+
+NAME: "Chassis 2 Transceiver Te2/1/3", DESCR: "Chassis 2 Transceiver 10Gbase-SR Te2/1/3"
+PID: XENPAK-10GB-SR    ,                     VID: V02 , SN: ONT12470238
+
+NAME: "Chassis 2 Transceiver Te2/1/4", DESCR: "Chassis 2 Transceiver 10Gbase-SR Te2/1/4"
+PID: XENPAK-10GB-SR    ,                     VID: V02 , SN: ONT125001MG
+
+NAME: "Chassis 2 2", DESCR: "Chassis 2 WS-X6724-SFP CEF720 24 port 1000mb SFP Rev. 3.3"
+PID: WS-X6724-SFP      ,                     VID: V05, SN: SAL1312M2ZE
+
+NAME: "Chassis 2 WS-F6700-CFC Centralized Forwarding Card sub-module of 2", DESCR: "Chassis 2 WS-F6700-CFC Centralized Forwarding Card Rev. 4.1"
+PID: WS-F6700-CFC      ,                     VID: V06, SN: SAL1310L9H8
+
+NAME: "Chassis 2 5", DESCR: "Chassis 2 VS-S720-10G 5 ports Supervisor Engine 720 10GE Rev. 2.1"
+PID: VS-S720-10G       ,                     VID: V03, SN: SAL1243792J
+
+NAME: "Chassis 2 msfc sub-module of 5", DESCR: "Chassis 2 VS-F6K-MSFC3 MSFC3 Daughterboard Rev. 1.0"
+PID: VS-F6K-MSFC3      ,                     VID:    , SN: SAL12426EQK
+
+NAME: "Chassis 2 VS-F6K-PFC3C Policy Feature Card 3 sub-module of 5", DESCR: "Chassis 2 VS-F6K-PFC3C Policy Feature Card 3 Rev. 1.0"
+PID: VS-F6K-PFC3C      ,                     VID: V01, SN: SAL12437BK6
+
+NAME: "Chassis 2 Transceiver Te2/5/4", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/5/4"
+PID: X2-10GB-SR        ,                     VID: V03 , SN: AGA1238XRUB
+
+NAME: "Chassis 2 Transceiver Te2/5/5", DESCR: "Chassis 2 X2 Transceiver 10Gbase-SR Te2/5/5"
+PID: X2-10GB-SR        ,                     VID: V03 , SN: AGA1247XL2B
+
+NAME: "Chassis 2 WS-C6509-E-FAN 1", DESCR: "Chassis 2 Enhanced 9-slot Fan Tray 1"
+PID: WS-C6509-E-FAN    ,                     VID: V03, SN: DCH13030800
+
+NAME: "Chassis 2 PS 1 WS-CAC-3000W", DESCR: "Chassis 2 AC power supply, 3000 watt 1"
+PID: WS-CAC-3000W      ,                     VID: V01, SN: SNI1309AW1V
+
+NAME: "Chassis 2 PS 2 WS-CAC-3000W", DESCR: "Chassis 2 AC power supply, 3000 watt 2"
+PID: WS-CAC-3000W      ,                     VID: V01, SN: SNI1308AWKD
+
+
+CSL04X01#sh module
+Mod Ports Card Type                              Model              Serial No.
+--- ----- -------------------------------------- ------------------ -----------
+  1    4  CEF720 4 port 10-Gigabit Ethernet      WS-X6704-10GE      SAL1312LV7N
+  2   24  CEF720 24 port 1000mb SFP              WS-X6724-SFP       SAL1312M2VM
+  5    5  Supervisor Engine 720 10GE (Active)    VS-S720-10G        SAL123418C8
+
+Mod MAC addresses                       Hw    Fw           Sw           Status
+--- ---------------------------------- ------ ------------ ------------ -------
+  1  0024.c452.8590 to 0024.c452.8593   2.9   12.2(14r)S5  12.2(33)SXI1 Ok
+  2  0024.c481.18bc to 0024.c481.18d3   3.3   12.2(18r)S1  12.2(33)SXI1 Ok
+  5  0019.e8bb.65ec to 0019.e8bb.65f3   2.1   8.5(2)       12.2(33)SXI1 Ok
+
+Mod  Sub-Module                  Model              Serial       Hw     Status 
+---- --------------------------- ------------------ ----------- ------- -------
+  1  Centralized Forwarding Card WS-F6700-CFC       SAL1312M3PN  4.1    Ok
+  2  Centralized Forwarding Card WS-F6700-CFC       SAL1310L8Z0  4.1    Ok
+  5  Policy Feature Card 3       VS-F6K-PFC3C       SAL12383NRN  1.0    Ok
+  5  MSFC3 Daughterboard         VS-F6K-MSFC3       SAL12362LMC  1.0    Ok
+
+Mod  Online Diag Status 
+---- -------------------
+  1  Pass
+  2  Pass
+  5  Pass
+CSL04X01#sh env
+environmental alarms:
+  no alarms
+
+backplane: 
+  operating clock count: 0
+  operating VTT count: 0
+  
+switch 1 fan-tray 1: 
+  switch 1 fan-tray 1 type: WS-C6509-E-FAN
+  switch 1 fan-tray 1 mode: Restricted-power
+  switch 1 fan-tray 1 fan-fail: OK
+switch 2 fan-tray 1: 
+  switch 2 fan-tray 1 type: WS-C6509-E-FAN
+  switch 2 fan-tray 1 mode: Restricted-power
+  switch 2 fan-tray 1 fan-fail: OK
+switch 1 VTT 1: 
+  switch 1 VTT 1 OK: OK
+  switch 1 VTT 1 outlet temperature: 19C
+switch 1 VTT 2: 
+  switch 1 VTT 2 OK: OK
+  switch 1 VTT 2 outlet temperature: 20C
+switch 1 VTT 3: 
+  switch 1 VTT 3 OK: OK
+  switch 1 VTT 3 outlet temperature: 22C
+switch 2 VTT 1: 
+  switch 2 VTT 1 OK: OK
+  switch 2 VTT 1 outlet temperature: 21C
+switch 2 VTT 2: 
+  switch 2 VTT 2 OK: OK
+  switch 2 VTT 2 outlet temperature: 21C
+switch 2 VTT 3: 
+  switch 2 VTT 3 OK: OK
+  switch 2 VTT 3 outlet temperature: 20C
+VTT 10:
+  VTT 10: not available
+VTT 11:
+  VTT 11: not available
+VTT 12:
+  VTT 12: not available
+switch 1 clock 1: 
+  switch 1 clock 1 OK: OK, switch 1 clock 1 clock-inuse: in-use
+switch 1 clock 2: 
+  switch 1 clock 2 OK: OK, switch 1 clock 2 clock-inuse: not-in-use
+switch 2 clock 1: 
+  switch 2 clock 1 OK: OK, switch 2 clock 1 clock-inuse: in-use
+switch 2 clock 2: 
+  switch 2 clock 2 OK: OK, switch 2 clock 2 clock-inuse: not-in-use
+switch 1 power-supply 1: 
+  switch 1 power-supply 1 fan-fail: OK
+  switch 1 power-supply 1 power-input: AC high
+  switch 1 power-supply 1 power-output-mode: high
+  switch 1 power-supply 1 power-output-fail: OK
+switch 1 power-supply 2: 
+  switch 1 power-supply 2 fan-fail: OK
+  switch 1 power-supply 2 power-input: AC high
+  switch 1 power-supply 2 power-output-mode: high
+  switch 1 power-supply 2 power-output-fail: OK
+switch 2 power-supply 1: 
+  switch 2 power-supply 1 fan-fail: OK
+  switch 2 power-supply 1 power-input: AC high
+  switch 2 power-supply 1 power-output-mode: high
+  switch 2 power-supply 1 power-output-fail: OK
+switch 2 power-supply 2: 
+  switch 2 power-supply 2 fan-fail: OK
+  switch 2 power-supply 2 power-input: AC high
+  switch 2 power-supply 2 power-output-mode: high
+  switch 2 power-supply 2 power-output-fail: OK
+switch 1 module 1: 
+  switch 1 module 1 power-output-fail: OK
+  switch 1 module 1 outlet temperature: 35C
+  switch 1 module 1 inlet temperature: 22C
+switch 1 module 2: 
+  switch 1 module 2 power-output-fail: OK
+  switch 1 module 2 outlet temperature: 22C
+  switch 1 module 2 inlet temperature: 21C
+  switch 1 module 2 device-1 temperature: 19C
+  switch 1 module 2 device-2 temperature: 23C
+switch 1 module 5: 
+  switch 1 module 5 power-output-fail: OK
+  switch 1 module 5 outlet temperature: 31C
+  switch 1 module 5 inlet temperature: 18C
+  switch 1 module 5 device-1 temperature: 24C
+  switch 1 module 5 device-2 temperature: 28C
+  switch 1 module 5 asic-1 temperature: 49C
+  switch 1 module 5 asic-3 temperature: 32C
+  switch 1 module 5 asic-4 temperature: 47C
+  switch 1 module 5 RP outlet temperature: 23C
+  switch 1 module 5 RP inlet temperature: 23C
+  switch 1 module 5 EARL outlet temperature: 24C
+  switch 1 module 5 EARL inlet temperature: 18C
+switch 2 module 1: 
+  switch 2 module 1 power-output-fail: OK
+  switch 2 module 1 outlet temperature: 35C
+  switch 2 module 1 inlet temperature: 23C
+switch 2 module 2: 
+  switch 2 module 2 power-output-fail: OK
+  switch 2 module 2 outlet temperature: 20C
+  switch 2 module 2 inlet temperature: 20C
+  switch 2 module 2 device-1 temperature: 19C
+  switch 2 module 2 device-2 temperature: 23C
+switch 2 module 5: 
+  switch 2 module 5 power-output-fail: OK
+  switch 2 module 5 outlet temperature: 29C
+  switch 2 module 5 inlet temperature: 17C
+  switch 2 module 5 device-1 temperature: 23C
+  switch 2 module 5 device-2 temperature: 27C
+  switch 2 module 5 asic-1 temperature: 48C
+  switch 2 module 5 asic-3 temperature: 33C
+  switch 2 module 5 asic-4 temperature: 45C
+  switch 2 module 5 RP outlet temperature: 23C
+  switch 2 module 5 RP inlet temperature: 23C
+  switch 2 module 5 EARL outlet temperature: 24C
+  switch 2 module 5 EARL inlet temperature: 18C
+
+
+  chassis connector rating: 2016.00 Watts (48.00 Amps @ 42V)
+
+switch 1 module 1
+  switch 1 module 1 connector rating: 2016.00 Watts (48.00 Amps @ 42V)
+  switch 1 module 1 power consumption: 295.26 Watts ( 7.03 Amps @ 42V)
+switch 1 module 2
+  switch 1 module 2 connector rating: 2016.00 Watts (48.00 Amps @ 42V)
+  switch 1 module 2 power consumption: 125.16 Watts ( 2.98 Amps @ 42V)
+switch 1 module 5
+  switch 1 module 5 connector rating: 1260.00 Watts (30.00 Amps @ 42V)
+  switch 1 module 5 power consumption: 338.10 Watts ( 8.05 Amps @ 42V)
+
+chassis per slot cooling capacity: 70 cfm
+ambient temperature: < 55C
+  switch 1 module 1 cooling requirement: 70 cfm
+  switch 1 module 2 cooling requirement: 70 cfm
+  switch 1 module 5 cooling requirement: 35 cfm
+  switch 2 module 1 cooling requirement: 70 cfm
+  switch 2 module 2 cooling requirement: 70 cfm
+  switch 2 module 5 cooling requirement: 35 cfm
+
+CSL04X01#sh int trunk
+
+CSL04X01#sh span
+CSL04X01#sh spanning-tree 
+
+VLAN0010
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    10
+             Address     0008.e3ff.fc28
+             This bridge is the root
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    10     (priority 0 sys-id-ext 10)
+             Address     0008.e3ff.fc28
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time 480
+
+Interface           Role Sts Cost      Prio.Nbr Type
+------------------- ---- --- --------- -------- --------------------------------
+Gi1/2/2             Desg FWD 4         128.2178 P2p Edge 
+Gi2/2/2             Desg FWD 4         128.4226 P2p Edge 
+
+
+VLAN0020
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    20
+             Address     0008.e3ff.fc28
+             This bridge is the root
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    20     (priority 0 sys-id-ext 20)
+             Address     0008.e3ff.fc28
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time 480
+
+Interface           Role Sts Cost      Prio.Nbr Type
+------------------- ---- --- --------- -------- --------------------------------
+Gi1/2/3             Desg FWD 4         128.2179 P2p Edge 
+Gi2/2/3             Desg FWD 4         128.4227 P2p Edge 
+
+
+VLAN0030
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    30
+             Address     0008.e3ff.fc28
+             This bridge is the root
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    30     (priority 0 sys-id-ext 30)
+             Address     0008.e3ff.fc28
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time 480
+
+Interface           Role Sts Cost      Prio.Nbr Type
+------------------- ---- --- --------- -------- --------------------------------
+Gi1/2/4             Desg FWD 4         128.2180 P2p Edge 
+Gi2/2/4             Desg FWD 4         128.4228 P2p Edge 
+
+CSL04X01#sh ntp ass
+
+      address         ref clock     st  when  poll reach  delay  offset    disp
+ ~127.127.7.1      127.127.7.1       7    16    64  377     0.0    0.00     0.0
+*~192.228.141.161  61.6.32.62        3   138   256  377     2.9    0.40     0.1
+ * master (synced), # master (unsynced), + selected, - candidate, ~ configured
+CSL04X01#sh ntp status
+Clock is synchronized, stratum 4, reference is 192.228.141.161
+nominal freq is 250.0000 Hz, actual freq is 250.0022 Hz, precision is 2**18
+reference time is CFA5B4A8.754E8FBC (10:30:00.458 MYT Tue May 25 2010)
+clock offset is 0.4017 msec, root delay is 10.07 msec
+root dispersion is 62.93 msec, peer dispersion is 0.08 msec
+CSL04X01#sh log
+Syslog logging: enabled (0 messages dropped, 2 messages rate-limited, 0 flushes, 0 overruns, xml disabled, filtering disabled)
+
+No Active Message Discriminator.
+
+
+
+No Inactive Message Discriminator.
+
+
+    Console logging: level debugging, 135 messages logged, xml disabled,
+                     filtering disabled
+    Monitor logging: level debugging, 0 messages logged, xml disabled,
+                     filtering disabled
+    Buffer logging:  level debugging, 136 messages logged, xml disabled,
+                    filtering disabled
+    Exception Logging: size (4096 bytes)
+    Count and timestamp logging messages: disabled
+    Persistent logging: disabled
+
+No active filter modules.
+
+    Trap logging: level informational, 81 message lines logged
+        Logging to 10.19.32.28  (udp port 514,  audit disabled,
+              authentication disabled, encryption disabled, link up),
+              81 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 10.19.32.22  (udp port 514,  audit disabled,
+              authentication disabled, encryption disabled, link up),
+              81 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+
+Log Buffer (8192 bytes):
+
+
+Firmware compiled 19-Feb-09 20:18 by weizhan Build [100]
+Jan 31 11:44:33.447: %SYS-CFC2-5-RESTART: System restarted --
+Cisco IOS Software, c6lc2 Software (c6lc2-SP-M), Version 12.2(33)SXI1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Sat 28-Mar-09 10:29 by prod_rel_team
+Jan 31 11:44:33.447: CFC2: Currently running ROMMON from S (Gold) region
+*Mar  1 00:00:02.263: DaughterBoard (Centralized Forwarding Card)
+
+Firmware compiled 19-Feb-09 20:18 by weizhan Build [100]
+
+slot_id is 1
+Jan 31 11:44:34.075: %SYS-CFC1-5-RESTART: System restarted --
+Cisco IOS Software, c6lc2 Software (c6lc2-SP-M), Version 12.2(33)SXI1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Sat 28-Mar-09 10:29 by prod_rel_team
+Jan 31 19:44:41: %PFINIT-SW1_SP-5-CONFIG_SYNC: Sync'ing the startup configuration to the standby Router. 
+Jan 31 11:44:34.079: CFC1: Currently running ROMMON from S (Gold) region
+Jan 31 19:44:47: %DIAG-SW1_SP-6-RUN_MINIMUM: Switch 1 Module 2: Running Minimal Diagnostics...
+Jan 31 19:44:48: %DIAG-SW1_SP-6-RUN_MINIMUM: Switch 1 Module 1: Running Minimal Diagnostics...
+Jan 31 19:44:57: %DIAG-SW1_SP-6-DIAG_OK: Switch 1 Module 2: Passed Online Diagnostics
+Jan 31 19:44:57: %OIR-SW1_SP-6-INSCARD: Card inserted in slot 2, interfaces are now online
+Jan 31 19:45:01: SW1_SP:  Card inserted in Switch_number = 1 , 
+                physical slot 2, interfaces are now online
+Jan 31 19:45:06: %DIAG-SW1_SP-6-DIAG_OK: Switch 1 Module 1: Passed Online Diagnostics
+Jan 31 19:45:06: %OIR-SW1_SP-6-INSCARD: Card inserted in slot 1, interfaces are now online
+Jan 31 19:45:17: SW1_SP:  Switch 2 Physical Slot 5 - Module Type LINE_CARD  inserted 
+Jan 31 19:45:18: SW1_SP:  Card inserted in Switch_number = 1 , 
+                physical slot 1, interfaces are now online
+Jan 31 19:45:34: %VSLP-SW1_SP-5-VSL_UP:  Ready for data traffic
+Jan 31 19:45:37: SW1_SP:  Card inserted in Switch_number = 2 , 
+                physical slot 5, interfaces are now online
+*Jan 31 11:45:06.943: SW2_SPSTBY: SP: Currently running ROMMON from S (Gold) region
+Jan 31 11:45:14.095: %C6KPWR-SW2_SPSTBY-4-PSOK: power supply 1 turned on.
+Jan 31 11:45:14.107: %C6KPWR-SW2_SPSTBY-4-PSOK: power supply 2 turned on.
+Jan 31 11:45:16.175: %FABRIC-SW2_SPSTBY-5-CLEAR_BLOCK: Clear block option is off for the fabric in slot 5.
+Jan 31 11:45:16.175: %FABRIC-SW2_SPSTBY-5-FABRIC_MODULE_ACTIVE: The Switch Fabric Module in slot 5 became active.
+Jan 31 11:45:16.804: %DIAG-SW2_SPSTBY-6-RUN_MINIMUM: Switch 2 Module 5: Running Minimal Diagnostics...
+Jan 31 11:45:16.848: %CONST_DIAG-SW2_SPSTBY-6-DIAG_PORT_SKIPPED: Module 5 port 4 is skipped in TestLoopback due to: the port is used as a VSL link.
+Jan 31 11:45:16.852: %CONST_DIAG-SW2_SPSTBY-6-DIAG_PORT_SKIPPED: Module 5 port 5 is skipped in TestLoopback due to: the port is used as a VSL link.
+Jan 31 11:45:20.065: %CONST_DIAG-SW2_SPSTBY-6-DIAG_PORT_SKIPPED: Module 5 port 4 is skipped in TestChannel due to: the port is used as a VSL link.
+Jan 31 11:45:28.930: %DIAG-SW2_SPSTBY-6-DIAG_OK: Switch 2 Module 5: Passed Online Diagnostics
+Jan 31 11:45:44.914: %SPANTREE-SW2_SPSTBY-5-EXTENDED_SYSID: Extended SysId enabled for type vlan. The Bridge IDs of all active STP instances have been updated, which might change the spanning tree topology
+Jan 31 11:45:56.328: %VSDA-SW2_SPSTBY-3-LINK_DOWN: Interface Gi2/5/1 is no longer dual-active detection capable
+Jan 31 11:45:56.496: %VSDA-SW2_SPSTBY-3-LINK_DOWN: Interface Gi2/5/2 is no longer dual-active detection capable
+Jan 31 11:45:58.997: %SYS-SW2_SPSTBY-5-RESTART: System restarted --
+Cisco IOS Software, s72033_sp Software (s72033_sp-IPBASEK9-M), Version 12.2(33)SXI1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Sat 28-Mar-09 10:48 by prod_rel_team
+Jan 31 19:46:01: %SYS-SW2_SPSTBY-3-LOGGER_FLUSHED: System was paused for 00:01:30 to ensure console debugging output.
+Jan 31 19:46:11: %HA_CONFIG_SYNC-6-BULK_CFGSYNC_SUCCEED: Bulk Sync succeeded
+Jan 31 19:46:12: %PFREDUN-SW2_SPSTBY-6-STANDBY: Ready for SSO mode
+Jan 31 19:46:12: %RF-SW1_SP-5-RF_TERMINAL_STATE: Terminal state reached for (SSO)
+Jan 31 19:46:13: SW1_SP:  Switch 2 Physical Slot 1 - Module Type LINE_CARD  inserted 
+
+Jan 31 19:46:13: SW1_SP:  Switch 2 Physical Slot 2 - Module Type LINE_CARD  inserted 
+Jan 31 19:46:15: %VSDA-SW1_SP-5-LINK_UP: Interface Gi1/5/1 is now dual-active detection capable
+Jan 31 19:46:15: %VSDA-SW1_SP-5-LINK_UP: Interface Gi1/5/2 is now dual-active detection capable
+Jan 31 19:46:14: %VSDA-SW2_SPSTBY-5-LINK_UP: Interface Gi2/5/1 is now dual-active detection capable
+Jan 31 19:46:14: %VSDA-SW2_SPSTBY-5-LINK_UP: Interface Gi2/5/2 is now dual-active detection capable
+Jan 31 19:46:15: %SYS-SW2_SPSTBY-3-LOGGER_FLUSHED: System was paused for 00:00:04 to ensure console debugging output.
+*Mar  1 00:00:02.299: DaughterBoard (Centralized Forwarding Card)
+
+Firmware compiled 19-Feb-09 20:18 by weizhan Build [100]
+Jan 31 11:47:03.334: %SYS-CFC2-5-RESTART: System restarted --
+Cisco IOS Software, c6lc2 Software (c6lc2-SP-M), Version 12.2(33)SXI1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Sat 28-Mar-09 10:29 by prod_rel_team
+Jan 31 19:47:04: %DIAG-SW2_SPSTBY-6-RUN_MINIMUM: Switch 2 Module 2: Running Minimal Diagnostics...
+Jan 31 11:47:03.338: CFC2: Currently running ROMMON from S (Gold) region
+Jan 31 19:47:14: %DIAG-SW2_SPSTBY-6-DIAG_OK: Switch 2 Module 2: Passed Online Diagnostics
+Jan 31 19:47:16: %DIAG-SW2_SPSTBY-6-RUN_MINIMUM: Switch 2 Module 1: Running Minimal Diagnostics...
+*Mar  1 00:00:02.303: DaughterBoard (Centralized Forwarding Card)
+
+Firmware compiled 19-Feb-09 20:18 by weizhan Build [100]
+
+slot_id is 1
+Jan 31 11:47:09.518: %SYS-CFC1-5-RESTART: System restarted --
+Cisco IOS Software, c6lc2 Software (c6lc2-SP-M), Version 12.2(33)SXI1, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2009 by Cisco Systems, Inc.
+Compiled Sat 28-Mar-09 10:29 by prod_rel_team
+Jan 31 11:47:09.522: CFC1: Currently running ROMMON from S (Gold) region
+Jan 31 19:47:19: SW1_SP:  Card inserted in Switch_number = 2 , 
+                physical slot 2, interfaces are now online
+Jan 31 19:47:25: %DIAG-SW2_SPSTBY-6-DIAG_OK: Switch 2 Module 1: Passed Online Diagnostics
+Jan 31 19:47:38: SW1_SP:  Card inserted in Switch_number = 2 , 
+                physical slot 1, interfaces are now online
+Jan 31 19:53:07: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.243.2 (Port-channel1) is up: new adjacency
+Jan 31 19:55:42: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.245.2 (Port-channel3) is up: new adjacency
+Jan 31 19:57:33: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.244.2 (Port-channel2) is up: new adjacency
+Jan 31 19:59:54: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.246.2 (GigabitEthernet1/5/3) is up: new adjacency
+Jan 31 20:00:02: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.246.2 (GigabitEthernet1/5/3) is down: Interface PEER-TERMINATION received
+Jan 31 20:00:02: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.246.2 (GigabitEthernet1/5/3) is up: new adjacency
+Jan 31 20:01:17: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.248.2 (GigabitEthernet2/5/3) is up: new adjacency
+Feb  6 09:27:06: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.246.2 (GigabitEthernet1/5/3) is down: interface down
+Feb  6 09:27:20: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.246.2 (GigabitEthernet1/5/3) is up: new adjacency
+Feb  6 09:31:01: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.246.2 (GigabitEthernet1/5/3) is down: interface down
+Feb  6 09:40:15: %DUAL-5-NBRCHANGE: EIGRP-IPv4:(429) 888: Neighbor 10.19.246.2 (GigabitEthernet1/5/3) is up: new adjacency
+Mar  3 06:21:59: %SYSTEM_CONTROLLER-SW1_SP-3-ERROR: Error condition detected: TM_NPP_PARITY_ERROR
+Mar  3 06:21:59: %SYSTEM_CONTROLLER-SW1_SP-3-MISTRAL_RESET: System Controller is reset:Normal Operation continues
+CSL04X01#sh buffer
+Buffer elements:
+     499 in free list (500 max allowed)
+     2946880357 hits, 0 misses, 0 created
+
+Public buffer pools:
+Small buffers, 104 bytes (total 1024, permanent 1024):
+     1013 in free list (128 min, 2048 max allowed)
+     1658817942 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Medium buffers, 256 bytes (total 3000, permanent 3000):
+     2999 in free list (64 min, 3000 max allowed)
+     6107224 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Middle buffers, 600 bytes (total 512, permanent 512):
+     504 in free list (64 min, 1024 max allowed)
+     3615035 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Big buffers, 1536 bytes (total 1000, permanent 1000):
+     1000 in free list (64 min, 1000 max allowed)
+     5963032 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+VeryBig buffers, 4520 bytes (total 10, permanent 10):
+     10 in free list (0 min, 100 max allowed)
+     7993 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Large buffers, 9240 bytes (total 8, permanent 8):
+     8 in free list (0 min, 10 max allowed)
+     5557 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Huge buffers, 18024 bytes (total 2, permanent 2):
+     2 in free list (0 min, 4 max allowed)
+     893 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+
+Interface buffer pools:
+CF Small buffers, 104 bytes (total 2000, permanent 1000, peak 2000 @ 7w0d):
+     2000 in free list (2000 min, 5000 max allowed)
+     0 hits, 0 misses, 0 trims, 1000 created
+     0 failures (0 no memory)
+CF Middle buffers, 600 bytes (total 2000, permanent 1000, peak 2000 @ 7w0d):
+     2000 in free list (2000 min, 5000 max allowed)
+     218 hits, 0 misses, 0 trims, 1000 created
+     0 failures (0 no memory)
+Syslog ED Pool buffers, 600 bytes (total 288, permanent 288):
+     256 in free list (288 min, 288 max allowed)
+     136 hits, 0 misses
+LI Middle buffers, 600 bytes (total 512, permanent 256, peak 512 @ 7w0d):
+     256 in free list (256 min, 768 max allowed)
+     171 hits, 85 fallbacks, 0 trims, 256 created
+     0 failures (0 no memory)
+     256 max cache size, 256 in cache
+     0 hits in cache, 0 misses in cache
+EOBC0/0 buffers, 1524 bytes (total 2400, permanent 2400):
+     1200 in free list (0 min, 2400 max allowed)
+     1200 hits, 0 fallbacks
+     1200 max cache size, 681 in cache
+     1415990581 hits in cache, 0 misses in cache
+CF Big buffers, 1536 bytes (total 1000, permanent 1000):
+     1000 in free list (1000 min, 5000 max allowed)
+     26 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+VSIBCPOOL buffers, 1536 bytes (total 2000, permanent 2000):
+     2000 in free list (500 min, 2500 max allowed)
+     77769243 hits, 0 fallbacks
+LI Big buffers, 1536 bytes (total 512, permanent 256, peak 512 @ 7w0d):
+     256 in free list (256 min, 768 max allowed)
+     171 hits, 85 fallbacks, 0 trims, 256 created
+     0 failures (0 no memory)
+     256 max cache size, 256 in cache
+     0 hits in cache, 0 misses in cache
+IPC buffers, 4096 bytes (total 2352, permanent 2352):
+     2270 in free list (784 min, 7840 max allowed)
+     588012387 hits, 0 fallbacks, 0 trims, 0 created
+     0 failures (0 no memory)
+CF VeryBig buffers, 4520 bytes (total 500, permanent 500):
+     500 in free list (500 min, 1000 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+LI Very Big buffers, 4520 bytes (total 257, permanent 128, peak 257 @ 7w0d):
+     129 in free list (128 min, 384 max allowed)
+     85 hits, 43 fallbacks, 2042 trims, 2171 created
+     0 failures (0 no memory)
+     128 max cache size, 128 in cache
+     0 hits in cache, 0 misses in cache
+CF Large buffers, 5024 bytes (total 250, permanent 250):
+     250 in free list (250 min, 500 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Private Huge IPC buffers, 18024 bytes (total 2, permanent 2):
+     2 in free list (1 min, 4 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Private Huge buffers, 65280 bytes (total 2, permanent 2):
+     2 in free list (1 min, 4 max allowed)
+     2592 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+
+Header pools:
+
+
+CSL04X01#sh boot
+BOOT variable = sup-bootdisk:s72033-ipbasek9-mz.122-33.SXI1.bin,12;
+CONFIG_FILE variable does not exist
+BOOTLDR variable does not exist
+Configuration register is 0x2102
+
+Standby is up
+Standby has 1048576K/65536K bytes of memory.
+
+Standby BOOT variable = sup-bootdisk:s72033-ipbasek9-mz.122-33.SXI1.bin,12;
+Standby CONFIG_FILE variable does not exist
+Standby BOOTLDR variable does not exist
+Standby Configuration register is 0x2102 
+CSL04X01#sh run
+Building configuration...
+
+Current configuration : 17345 bytes
+!
+! No configuration change since last restart
+!
+upgrade fpd auto
+version 11.2
+no service pad
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime localtime
+service timestamps log datetime localtime
+service password-encryption
+service counters max age 5
+!
+hostname CSL04X01
+!
+boot-start-marker
+boot system sup-bootdisk:s72033-ipbasek9-mz.122-33.SXI1.bin
+boot-end-marker
+!
+security passwords min-length 1
+logging buffered 8192
+!
+username cisco privilege 15 secret 5 $1$mEyN$jRjbJ1mCbKWcxkiRv2eTh/
+aaa new-model
+!
+!
+aaa authentication login default group tacacs+ local
+aaa authorization console
+aaa authorization exec default group tacacs+ local 
+aaa accounting exec default start-stop group tacacs+
+aaa accounting commands 1 default start-stop group tacacs+
+aaa accounting commands 15 default start-stop group tacacs+
+!
+!
+!
+aaa session-id common
+clock timezone MYT 8
+vtp domain SC
+vtp mode transparent
+!
+switch virtual domain 10
+ switch mode virtual
+ switch 1 priority 200
+ dual-active detection pagp trust channel-group 1
+ dual-active detection pagp trust channel-group 2
+ mac-address use-virtual
+!
+ip subnet-zero
+no ip source-route
+no ip domain-lookup
+!
+!
+!
+udld aggressive
+
+mls netflow interface
+no mls flow ip
+mls ip slb purge global
+mls cef error action reset
+!
+!
+diagnostic bootup level minimal
+diagnostic cns publish cisco.cns.device.diag_results
+diagnostic cns subscribe cisco.cns.device.diag_commands
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast edge bpduguard default
+spanning-tree extend system-id
+spanning-tree vlan 1,10,20,30 priority 0
+!
+redundancy
+ main-cpu
+  auto-sync running-config
+ mode sso
+!
+vlan internal allocation policy ascending
+vlan access-log ratelimit 2000
+!
+vlan 10
+ name IntFW1_Core
+!
+vlan 20
+ name IntFW2_Core
+!
+vlan 30
+ name IntFW3_Core
+!
+!
+!
+interface Loopback0
+ ip address 10.19.1.1 255.255.255.255
+!
+interface Port-channel1
+ description CSL04X02 Po1
+ no switchport
+ ip address 10.19.243.1 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Port-channel2
+ description CSL04X03 Po1
+ no switchport
+ ip address 10.19.244.1 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Port-channel3
+ description CSL04X04 Po1
+ no switchport
+ ip address 10.19.245.1 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Port-channel10
+ description VSL
+ no switchport
+ no ip address
+ switch virtual link 1
+ mls qos trust cos
+ no mls qos channel-consistency
+!
+interface Port-channel20
+ description VSL
+ no switchport
+ no ip address
+ switch virtual link 2
+ mls qos trust cos
+ no mls qos channel-consistency
+!
+interface TenGigabitEthernet1/1/1
+ description CSL04X02 T1/1/1
+ no switchport
+ no ip address
+ udld port aggressive
+ channel-group 1 mode desirable
+!
+interface TenGigabitEthernet1/1/2
+ description CSL04X02 T2/1/2
+ no switchport
+ no ip address
+ udld port aggressive
+ channel-group 1 mode desirable
+!
+interface TenGigabitEthernet1/1/3
+ description CSL04X03 T1/1/1
+ no switchport
+ no ip address
+ udld port aggressive
+ channel-group 2 mode desirable
+!
+interface TenGigabitEthernet1/1/4
+ description CSL04X03 T2/1/2
+ no switchport
+ no ip address
+ udld port aggressive
+ channel-group 2 mode desirable
+!
+interface GigabitEthernet1/2/1
+ description CSL04X04 G1/0/24
+ no switchport
+ no ip address
+ channel-group 3 mode on
+!
+interface GigabitEthernet1/2/2
+ description CFL04X01 G1/0
+ switchport
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/2/3
+ description CFL04X02 G1/1
+ switchport
+ switchport access vlan 20
+ switchport mode access
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/2/4
+ description CFL04X03 G1/2
+ switchport
+ switchport access vlan 30
+ switchport mode access
+ spanning-tree portfast edge
+!
+interface GigabitEthernet1/2/5
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/6
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/7
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/8
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/9
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/10
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/11
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/12
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/13
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/14
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/15
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/16
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/17
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/18
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/19
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/20
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/21
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/22
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/23
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/2/24
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/5/1
+ description FastHello
+ no switchport
+ no ip address
+ dual-active fast-hello
+!
+interface GigabitEthernet1/5/2
+ description FastHello
+ no switchport
+ no ip address
+ dual-active fast-hello
+!
+interface GigabitEthernet1/5/3
+ description CRL04X03 F0/0
+ no switchport
+ ip address 10.19.246.1 255.255.255.0
+!
+interface TenGigabitEthernet1/5/4
+ description VSL
+ no switchport
+ no ip address
+ mls qos trust cos
+ channel-group 10 mode on
+!
+interface TenGigabitEthernet1/5/5
+ description VSL
+ no switchport
+ no ip address
+ mls qos trust cos
+ channel-group 10 mode on
+!
+interface TenGigabitEthernet2/1/1
+ description CSL04X02 T2/1/1
+ no switchport
+ no ip address
+ udld port aggressive
+ channel-group 1 mode desirable
+!
+interface TenGigabitEthernet2/1/2
+ description CSL04X02 T1/1/2
+ no switchport
+ no ip address
+ udld port aggressive
+ channel-group 1 mode desirable
+!
+interface TenGigabitEthernet2/1/3
+ description CSL04X03 T2/1/1
+ no switchport
+ no ip address
+ udld port aggressive
+ channel-group 2 mode desirable
+!
+interface TenGigabitEthernet2/1/4
+ description CSL04X03 T1/1/2
+ no switchport
+ no ip address
+ udld port aggressive
+ channel-group 2 mode desirable
+!
+interface GigabitEthernet2/2/1
+ description CSL04X04 G2/0/24
+ no switchport
+ no ip address
+ channel-group 3 mode on
+!
+interface GigabitEthernet2/2/2
+ description CFL04X01 G1/0
+ switchport
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast edge
+!
+interface GigabitEthernet2/2/3
+ description CFL04X02 G1/1
+ switchport
+ switchport access vlan 20
+ switchport mode access
+ spanning-tree portfast edge
+!
+interface GigabitEthernet2/2/4
+ description CFL04X03 G1/2
+ switchport
+ switchport access vlan 30
+ switchport mode access
+ spanning-tree portfast edge
+!
+interface GigabitEthernet2/2/5
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/6
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/7
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/8
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/9
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/10
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/11
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/12
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/13
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/14
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/15
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/16
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/17
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/18
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/19
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/20
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/21
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/22
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/23
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/2/24
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2/5/1
+ description FastHello
+ no switchport
+ no ip address
+ dual-active fast-hello
+!
+interface GigabitEthernet2/5/2
+ description FastHello
+ no switchport
+ no ip address
+ dual-active fast-hello
+!
+interface GigabitEthernet2/5/3
+ description CRL04X04 E0
+ no switchport
+ ip address 10.19.248.1 255.255.255.0
+ delay 10
+!
+interface TenGigabitEthernet2/5/4
+ description VSL
+ no switchport
+ no ip address
+ mls qos trust cos
+ channel-group 20 mode on
+!
+interface TenGigabitEthernet2/5/5
+ description VSL
+ no switchport
+ no ip address
+ mls qos trust cos
+ channel-group 20 mode on
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ ip address 10.19.240.1 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan20
+ ip address 10.19.241.1 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+interface Vlan30
+ ip address 10.19.242.1 255.255.255.0
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+router eigrp 888
+ network 10.19.1.1 0.0.0.0
+ network 10.19.240.0 0.0.0.255
+ network 10.19.241.0 0.0.0.255
+ network 10.19.242.0 0.0.0.255
+ network 10.19.243.0 0.0.0.255
+ network 10.19.244.0 0.0.0.255
+ network 10.19.245.0 0.0.0.255
+ network 10.19.246.0 0.0.0.255
+ network 10.19.248.0 0.0.0.255
+ eigrp router-id 10.19.1.1
+ no auto-summary
+ passive-interface default
+ no passive-interface GigabitEthernet1/5/3
+ no passive-interface Port-channel1
+ no passive-interface Port-channel2
+ no passive-interface Port-channel3
+ no passive-interface GigabitEthernet2/5/3
+ redistribute static metric 100000 1 255 1 1500 route-map static2eigrp
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.19.240.2 tag 1 name SC_Corporate
+ip route 10.1.8.18 255.255.255.255 10.19.242.2 tag 1 name Bursa_Trade
+ip route 10.1.8.81 255.255.255.255 10.19.242.2 tag 1 name Bursa_Armada
+ip route 10.15.255.128 255.255.255.128 10.19.242.2 tag 1 name Bursa_Trade
+ip route 10.19.247.0 255.255.255.0 10.19.242.2 tag 1 name SC_3rd_Party
+ip route 10.60.0.0 255.255.0.0 10.19.241.2 tag 1 name SC_Business
+ip route 10.61.0.0 255.255.0.0 10.19.242.2 tag 1 name SC_3rd_Party
+ip route 67.57.0.0 255.255.0.0 10.19.242.2 tag 1 name Reuters
+ip route 69.184.0.0 255.255.0.0 10.19.242.2 tag 1 name Bloomberg
+ip route 128.8.3.107 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 155.195.0.0 255.255.0.0 10.19.242.2 tag 1 name Reuters
+ip route 172.16.0.0 255.255.0.0 10.19.242.2 tag 1 name BNM
+ip route 172.16.210.200 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 172.16.210.201 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 172.19.0.0 255.255.0.0 10.19.242.2 tag 1 name BNM
+ip route 192.168.1.0 255.255.255.0 10.19.240.2 tag 1 name SC_Corporate
+ip route 192.168.1.231 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 192.168.5.0 255.255.255.0 10.19.241.2 tag 1 name SC_Business
+ip route 192.168.6.0 255.255.255.0 10.19.240.2 tag 1 name SC_Corporate
+ip route 192.168.12.207 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 192.168.252.201 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 192.168.252.211 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 192.168.252.242 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 192.168.252.243 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 192.168.252.244 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 192.168.253.221 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 192.168.253.228 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 198.206.0.0 255.255.0.0 10.19.242.2 tag 1 name Reuters
+ip route 199.105.176.0 255.255.248.0 10.19.242.2 tag 1 name Bloomberg
+ip route 199.105.184.0 255.255.254.0 10.19.242.2 tag 1 name Bloomberg
+ip route 202.190.245.201 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 202.190.245.207 255.255.255.255 10.19.242.2 tag 1 name Bursa_Apps
+ip route 204.109.0.0 255.255.0.0 10.19.242.2 tag 1 name Reuters
+ip route 205.183.246.0 255.255.255.0 10.19.242.2 tag 1 name Bloomberg
+ip route 208.134.161.0 255.255.255.0 10.19.242.2 tag 1 name Bloomberg
+no ip http server
+no ip http secure-server
+!
+ip tacacs source-interface Loopback0
+!
+ip access-list standard SNMP_ACL
+ permit 10.19.32.22
+ip access-list standard orion_acl
+ permit 10.19.32.27
+!
+logging source-interface Loopback0
+logging 10.19.32.28
+logging 10.19.32.22
+route-map static2eigrp permit 10
+ match tag 1
+!
+snmp-server engineID local 8000000903000008E3FFFC28
+snmp-server group orion v3 priv access orion_acl
+snmp-server community sc_ro RO SNMP_ACL
+snmp-server community sc_rw RW SNMP_ACL
+snmp-server trap-source Loopback0
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps chassis
+snmp-server enable traps module
+snmp-server enable traps transceiver all
+snmp-server enable traps ds1
+snmp-server enable traps call-home message-send-fail server-fail
+snmp-server enable traps tty
+snmp-server enable traps eigrp
+snmp-server enable traps rep
+snmp-server enable traps auth-framework sec-violation
+snmp-server enable traps memory bufferpeak
+snmp-server enable traps flex-links status
+snmp-server enable traps csg agent quota-server database
+snmp-server enable traps sonet
+snmp-server enable traps dot1x auth-fail-vlan guest-vlan no-auth-fail-vlan no-guest-vlan
+snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+snmp-server enable traps fru-ctrl ps-output-change status
+snmp-server enable traps entity
+snmp-server enable traps module-auto-shutdown sys-action auto-shutdown
+snmp-server enable traps cpu threshold
+snmp-server enable traps rsvp
+snmp-server enable traps srp
+snmp-server enable traps vtp
+snmp-server enable traps vlancreate
+snmp-server enable traps vlandelete
+snmp-server enable traps flash insertion removal
+snmp-server enable traps c6kxbar intbus-crcexcd intbus-crcrcvrd swbus
+snmp-server enable traps entity-diag boot-up-fail hm-test-recover hm-thresh-reached scheduled-test-fail
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server enable traps port-security
+snmp-server enable traps vswitch vsl
+snmp-server enable traps slb real virtual csrp
+snmp-server enable traps atm subif
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps event-manager
+snmp-server enable traps hsrp
+snmp-server enable traps ipmulticast
+snmp-server enable traps l2tc threshold sys-threshold
+snmp-server enable traps MAC-Notification change move threshold
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+snmp-server enable traps rf
+snmp-server enable traps rtr
+snmp-server enable traps bridge newroot topologychange
+snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistency
+snmp-server enable traps syslog
+snmp-server enable traps vlan-mac-limit
+snmp-server host 10.19.32.22 version 2c sc_ro 
+snmp-server host 10.19.32.27 version 3 priv sc_ro 
+!
+tacacs-server host 10.19.32.14 key 7 105A291A0414015A5E57
+tacacs-server directed-request
+!
+control-plane
+!
+banner login ^C
+
+
+                Individuals using this computer system without authority,
+                or in excess of their authority, are subject to having all
+                of their activities on this system monitored and recorded
+                by system personnel.
+
+                In the course of monitoring individuals improperly using this
+                system, or in the course of system maintenance, the activities
+                of authorised users may also be monitored.
+
+                Anyone using this system expressly consents to such monitoring
+                and is advised that if such monitoring reveals possible
+                evidence of criminal activity, system personnel may provide
+                the evidence of such monitoring to law enforcement officals.
+^C
+!
+line con 0
+ logging synchronous
+line vty 0 4
+ logging synchronous
+line vty 5 15
+ logging synchronous
+!
+mac-address-table synchronize
+mac-address-table aging-time 480
+ntp clock-period 17179715
+ntp source Loopback0
+ntp master
+ntp update-calendar
+ntp server 192.228.141.161
+no event manager policy Mandatory.go_switchbus.tcl type system
+!
+!
+module provision switch 1
+ slot 1 slot-type 148 port-type 60 number 4  virtual-slot 17
+ slot 2 slot-type 156 port-type 31 number 24  virtual-slot 18
+ slot 5 slot-type 254 port-type 31 number 2 port-type 61 number 1 port-type 60 number 2  virtual-slot 21
+ !
+module provision switch 2
+ slot 1 slot-type 148 port-type 60 number 4  virtual-slot 33
+ slot 2 slot-type 156 port-type 31 number 24  virtual-slot 34
+ slot 5 slot-type 254 port-type 31 number 2 port-type 61 number 1 port-type 60 number 2  virtual-slot 37
+ 
+!
+
+end
+
+CSL04X01#ter def leng
+CSL04X01#ex
+60 number 4  virtual-slot 17
+ slot 2 slot-type 156 port-type 31 number 24  virtual-slot 18
+ slot 5 slot-type 254 port-type 31 number 2 port-type 61 number 1 port-type 60 number 2  virtual-slot 21
+ !
+module provision switch 2
+ slot 1 slot-type 148 port-type 60 number 4  virtual-slot 33
+ slot 2 slot-type 156 port-type 31 number 24  virtual-slot 34
+ slot 5 slot-type 254 port-type 31 number 2 port-type 61 number 1 port-type 60 number 2  virtual-slot 37
+ 
+!
+
+end
